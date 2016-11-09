@@ -127,7 +127,7 @@ export async function getShotById(ctx) {
 }
 
 export async function likeShotById(ctx){
-  const {sub} = ctx.state.user
+  const {sub} = ctx.state.user || {}
   const {id} = ctx.params
   const {liked} = ctx.request.body
 
