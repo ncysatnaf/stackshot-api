@@ -33,6 +33,7 @@
     "babel-preset-stage-1": "^6.13.0",
     "concurrently": "^2.2.0",
     "nodemon": "^1.10.0",
+    "socket.io-client": "^1.5.1",
     "xo": "latest",
     "yargs": "^6.4.0"
   },
@@ -43,7 +44,9 @@
       "import/prefer-default-export": 0,
       "no-warning-comments": 0
     },
-    "globals": ["io"]
+    "globals": [
+      "io"
+    ]
   },
   "dependencies": {
     "async-busboy": "^0.1.1",
