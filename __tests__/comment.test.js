@@ -1,7 +1,7 @@
 import request from 'superagent'
 import {url, testAccount} from './config'
 import {genUniqueString} from './util'
-import mock from './__mocks__/comments'
+import mock from './__mocks__/233'
 
 const genData = () => ({username: genUniqueString('test-'), password: '000000', email: `${genUniqueString('test-')}@tucao.com`})
 const genRandom = (datas) => datas[Math.floor(Math.random() * datas.length)]
@@ -42,7 +42,6 @@ describe('comment', () => {
       //user message update
       let updateUser1 = await request.get(`${url}/auth/user`).set('Authorization', `Bearer ${user1.body.token}`)
       expect(updateUser1.body.newComments).toContainEqual(comment2.body._id)
-
 
     } catch (e) {
       console.log(e)
